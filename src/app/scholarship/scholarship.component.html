@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+<h4 class="text-center">SCHOLARSHIP APPLICATION FORM</h4>
+<hr>
+<form  #schForm="ngForm" (ngSubmit)="saveScholarship(schForm)" class="form-group">
+    <div class="row m-4  text-left ">
+        <div class="col" >
+                <b>BASIC DETAILS</b><br>
+                <table>
+                    <tr><td>AADHAR NUMBER</td><td><input type="number" name="uniqid" [(ngModel)]="uniqid" required readonly class="form-control"></td><td>RELEGION</td><td><select name="relegion" ngModel required class="form-control">
+                        <option value="Hindu">Hindu</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Sikh">Sikh</option>
+                        </select></td></tr>
+                    <tr><td>COMMUNITY/CATEGORY</td><td><input type="text" name="category" ngModel required class="form-control"></td><td>FATHER NAME</td><td><input type="text" name="fathername" ngModel required class="form-control"></td></tr>
+                    <tr><td>MOTHER NAME</td><td><input type="text" name="mothername" ngModel required class="form-control"></td><td>FAMILY ANNUAL</td><td><input type="number" name="annualincome" ngModel required class="form-control"></td></tr>   
+                </table>
+        </div>    
+    </div>
+    
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>ACADEMIC DETAILS</b><br>
+            <table>
+                <tr><td>INSTITUTE NAME</td>
+                    <td><select name="institutename" ngModel class="form-control">
+                    <option [value]="i.instname" *ngFor="let i of institute">{{i.instname}}</option>
+                </select></td><td>PRESENT CLASS/COURSE</td><td><input type="text" name="presentclass" ngModel required class="form-control"></td></tr>
+                <tr><td>PRESENT CLASS/COURSE YEAR</td><td><input type="number" name="presentclassyear" ngModel required class="form-control"></td><td>MODE OF STUDY</td><td><select name="modeofstudy" ngModel class="form-control">
+                    <option value="distance">Distance</option>
+                    <option value="regular">Regular</option>
+                </select></td></tr>
+                <tr><td>CLASS START DATE</td><td><input type="date" name="classstartdate" ngModel required class="form-control"></td><td>UNIVERSITY/BOARD NAME</td><td><input type="text" name="universityname" ngModel required class="form-control"></td></tr>
+                <tr><td>PREVIOUS CLASS/COURSE</td><td><input type="text" name="previousclass" ngModel required class="form-control"></td><td>PREVIOUS PASSING YEAR</td><td><input type="number" name="previouspassingyear" ngModel required class="form-control"></td></tr>
+                <tr><td>PREVIOUS CLASS %</td><td><input type="number" name="previuosclasspercent" ngModel required max="100" min="0" class="form-control"></td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>10TH CLASS</b><br>
+            <table>
+                <tr><td>ROLL NUMBER</td><td><input type="text" name="rollnum10" ngModel required class="form-control"></td><td>BOARD NAME</td><td><input type="text" name="boardname10" ngModel required class="form-control"></td></tr>
+                <tr><td>PASSING YEAR</td><td><input type="number" name="passingyear10" ngModel required class="form-control"></td><td>% OBTAINED</td><td><input type="number" name="prcentobt10" ngModel required max="100" min="0" class="form-control"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>12TH CLASS</b><br>
+            <table>
+                <tr><td>ROLL NUMBER</td><td><input type="text" name="rollnum12" ngModel required class="form-control"></td><td>BOARD NAME</td><td><input type="text" name="boardname12" ngModel required class="form-control"></td></tr>
+                <tr><td>PASSING YEAR</td><td><input type="number" name="passingyear12" ngModel required class="form-control"></td><td>% OBTAINED</td><td><input type="number" name="prcentobt12" ngModel required max="100" min="10" class="form-control"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>FEE DETAILS</b><br>
+            ADMISSION FEE<input type="number" name="admissionfee" ngModel required class="form-control"> TUTION FEE<input type="number" name="tutionfee" ngModel required class="form-control"> OTHER FEE<input type="number" name="otherfee" ngModel required class="form-control"><br><br>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>OTHER PERSONAL DETAILS</b><br>
+            <table>
+                <tr><td>IS DISABLED</td><td><select name="isdisabled" ngModel class="form-control">
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select></td><td>TYPE OF DISABILTY</td><td><input type="text" name="disabilitytype" ngModel  class="form-control"></td></tr>
+                <tr><td>% OF DISABLITY</td><td><input type="number" name="disabilitypercentage" ngModel  max="100" min="1" class="form-control" ></td><td>MARTIAL STATUS</td><td><select name="maritialstatus" class="form-control">
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select></td></tr>
+                <tr><td>PARENTS PROFESSION</td><td><input type="text" name="parentsprofession" ngModel required class="form-control"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>CONTACT DETAILS</b><br>
+            <table>
+                <tr><td>
+                    STATE</td><td><select name="state" ngModel required class="form-control" (change)="onChangeState($any($event.target).value)">
+                        <option *ngFor="let state of stateInfo; let j = index" value="{{j}}">{{state.StateName}}</option>
+                      </select> 
+                    </td>
+                    <td>
+                        DISTRICT</td><td><select name="district" ngModel required class="form-control">
+                            <option *ngFor="let city of cityInfo; let k = index" value="{{k}}">{{city}}</option>
+                        </select>
+                    </td>
+                    <td>BLOCK/TALUK</td><td><input type="text" name="taluk" class="form-control"></td>
+                </tr>
+                <tr><td>HOUSE NUMBER</td><td><input type="text" name="housenumber" ngModel class="form-control"></td><td>STREET NUMBER</td><td><input type="text" name="streetnumber" ngModel class="form-control"></td></tr>
+                <tr><td>PINCODE</td><td><input type="text" name="pincode" ngModel required class="form-control"></td><td>CHOOSE SCHEME APPLYING FOR</td><td><select name="scheme" ngModel required class="form-control">
+                    <option value="scholarship-2021">Scholarship-2021</option>
+                </select></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col">
+            <b>DOCUMENTS UPLOAD SECTION</b><br>
+            <form (ngSubmit)="upload()" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>STUDENT PHOTOGRAPH</td><td><input type="file" class="form-control" name="t1" (change)="onFileChange1($event)" accept=".png,.jpeg,.jpg"></td>
+                </tr>
+                <tr>
+                    <td>PREVIOUS YEAR MARKSHEET</td><td><input type="file" class="form-control" name="t2" (change)="onFileChange2($event)" accept=".png,.jpeg,.jpg"></td>
+                </tr>
+                <tr>
+                    <td>INSTITUTE ID CARD</td><td><input type="file" class="form-control" name="t3" (change)="onFileChange3($event)" accept=".png,.jpeg,.jpg"></td>
+                </tr>
+                <tr>
+                    <td>10TH CLASS MARKSHEET</td><td><input type="file" class="form-control" name="t4" (change)="onFileChange4($event)" accept=".png,.jpeg,.jpg"></td>
+                </tr>
+                <tr>
+                    <td>12TH CLASS MARKSHEET</td><td><input type="file" class="form-control" name="t5" (change)="onFileChange5($event)" accept=".png,.jpeg,.jpg"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Upload</button></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left ">
+        <div class="col" style="max-width: 50%;">
+            <input type="checkbox" name="declare" value="declare"  ><label for="declare"> ALL THE DETAILS FURNISHED BY ME ARE TRU TO THE BEST OF MY 
+                KNOWLEDGE IF ANY MISTAKES ARE FOUND THEN I MAY BE DISQUALIFIED FOR SCHOLARSHIP SCHEME ANNOUNCED BY GOVERMENT OF INDIA OR MY STATE GOVERMENT.
+            </label>
+        </div>
+    </div>
+
+    <div class="row m-4  text-left">
+        <div class="col" style="max-width: 10%;">
+            <input type="submit" name="Submit" value="Submit" [disabled]="!schForm.valid" class="form-control">
+        </div>
+        <div class="col" style="max-width: 10%;">
+            <input type="reset" name=Reset class="form-control">
+        </div>  
+    </div>
+
+
+</form>
+</body>
+</html>

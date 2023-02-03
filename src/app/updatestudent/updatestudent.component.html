@@ -1,0 +1,35 @@
+<form #studForm="ngForm" (ngSubmit)="updateStudent(studForm)">
+    <table>
+        <tr>
+            <td>State</td><input type="text" name="state" [(ngModel)]="student.state" required class="form-control"><td>District</td><input type="text" name="district" [(ngModel)]="student.district" required class="form-control"> 
+        </tr>
+        <tr>
+            <td>Name</td><input type="text" name="name" [(ngModel)]="student.name" required class="form-control"><td>Date Of Birth</td><input type="date" name="dob" [(ngModel)]="student.dob" required class="form-control">
+        </tr>
+        <tr>
+            <td>Gender</td><input type="text" name="gender" [(ngModel)]="student.gender" required class="form-control"><td>Phone</td><input type="number" name="mobile" [(ngModel)]="student.mobile" required maxlength="10" class="form-control">
+        </tr>
+        <tr>
+            <td>Email Id</td><input type="email" name="email" [(ngModel)]="student.email" required class="form-control">
+        </tr>
+        <tr>
+            <td>Institute Code</td><input type="text" name="institutecode" [(ngModel)]="student.institutecode" required class="form-control"><td>Aadhar Number</td><input type="text" name="uniqid" [(ngModel)]="student.uniqid" required readonly class="form-control">
+        </tr>
+        <tr>
+            <td>Bank IFSC</td><input type="text" name="bankifsc" [(ngModel)]="student.bankifsc" required class="form-control"><td>Bank Account Number</td><input type="text" name="bankaccount" [(ngModel)]="student.bankaccount" required class="form-control">
+        </tr>
+        <tr>
+            <td>Bank Name</td><input type="text" name="bankname" [(ngModel)]="student.bankname" required class="form-control">
+        </tr>
+        <tr>
+            <td>Old Password</td><input type="password" name="oldpassword" [(ngModel)]="oldpassword" required class="form-control">
+        </tr>
+        <tr>
+            <td>New Password</td><input type="password" name="password" ngModel required class="form-control">
+        </tr>
+        <tr>
+            <td><button (click)="goBack()" class="btn btn-primary">Cancel</button></td>
+            <td><input type="submit" name="Save" [disabled]="!studForm.valid" class="btn btn-primary"></td>
+        </tr>
+    </table>
+</form>

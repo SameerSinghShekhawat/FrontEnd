@@ -1,0 +1,77 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+  
+   <div class=" text-center mx-auto border border-dark mt-5  p-2" style="width: auto;">
+  
+    <nav class="nav nav-pills nav-fill">
+    <a class="nav-item nav-link active">HOME</a>
+    <a class="nav-item nav-link">ABOUT US</a>
+    <a class="nav-item nav-link">CONTACT US</a>
+    <a class="nav-item nav-link " routerLink="tonewreg">NEW REGISTRATION</a>
+  </nav>
+    </div>
+    
+  <div class="row m-4  text-center ">
+      <div class="col">
+      <div class="card border-dark mb-3 row" style="max-width: 100%;">
+    <div class="card-header">Latest Updates</div>
+    <div class="card-body text-dark pb-5" >
+      <h5 class="card-title p-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+    </div>
+        </div>
+      <div class="card border-dark mb-3 row" style="max-width: 100%;">
+    <div class="card-header">Helpdesk</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+      
+    </div>
+  </div>
+      </div>
+      <div class="col mr-2 ml-2 mb-3">
+           <div class="card border-dark mb-3 row" style="max-width: 100%; height: 100%; ">
+    <div class="card-body text-dark" >
+      <h5  style="height:100%; display:grid; align-items:center">National Scholarship portal is an education related portal. National Scholarship portal is a project developed with the main aim of providing an easy and efficient way for applying and getting a scholarship for students in need of it. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+    </div>
+        </div>
+      </div>
+      <div class="col">
+           <div class="card border-dark mb-3 row" style="max-width: 100%; height: auto;">
+    <div class="card-body text-dark" >
+      <h5  style="display:grid; align-items:center">Login</h5>
+      
+      <div class="mt-4 text-left">
+        <div>
+            <select [(ngModel)]="role" class="from-select,form-group mx-sm-3 mb-3">
+                <option value="student">Student</option>
+                <option value="institute">Institute</option>
+                <option value="nodal">Nodal</option>
+                <option value="ministry">Ministry</option>
+            </select>
+        </div>
+        
+      <div class="form-group mx-sm-3 mb-2">
+      <label for="inputUserId" class="sr-only">User ID</label>
+      <input type="text" class="form-control" [(ngModel)]="loginid" placeholder="Id">
+    </div>
+      
+      <div class="form-group mx-sm-3 mb-2">
+      <label for="inputPassword2" class="sr-only">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password">
+    </div>
+      <a class="nav-item nav-link" routerLink="toforgetpass">forgot password?</a>
+
+  
+        <button (click)="validatelogin()" class="btn btn-primary m-3">Login</button>
+  
+      </div>
+      
+    </div>
+        </div>  	 
+    </div>
+    </div>
+  
+  </body>
+  </html>

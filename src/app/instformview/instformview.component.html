@@ -1,0 +1,58 @@
+
+    <table class="table">
+        <tr>
+            <td>Id</td><td>{{institute.instid}}</td>
+        </tr>
+        <tr>
+            <td>Name</td><td>{{institute.instname}}</td>
+        </tr>
+        <tr>
+            <td>Category</td><td>{{institute.instcategory}}</td>
+        </tr>
+        <tr>
+            <td>State</td><td>{{institute.inststate}}</td>
+        </tr>
+        <tr>
+            <td>Institute City</td><td>{{institute.instcity}}</td>
+        </tr>
+        <tr>
+            <td>Dise Code</td><td>{{institute.instdisecode}}</td>
+        </tr>
+        <tr>
+            <td>Address Line1</td><td>{{institute.instaddressline1}}</td>
+        </tr>
+        <tr>
+            <td>Address Line2</td><td>{{institute.instaddressline2}}</td>
+        </tr>
+        <tr>
+            <td>City</td><td>{{institute.instcity}}</td>
+        </tr>
+        <tr>
+            <td>Email</td><td>{{institute.instmail}}</td>
+        </tr>
+        <tr>
+            <td>Institute Affilated Type</td><td>{{institute.instaffiliatedinsttype}}</td>
+        </tr>
+        <tr>
+            <td>Institute Type</td><td>{{institute.insttype}}</td>
+        </tr>
+       <tr>
+            <td>District</td><td>{{institute.instdistrict}}</td>
+        </tr>
+        <tr>
+            <td>Principal</td><td>{{institute.instprincipalname}}</td>
+        </tr>
+        <tr>
+            <td>Affialted University</td><td>{{institute.instaffialteduniboardname}}</td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-danger" (click)="rejected()" [disabled]="alreadydone">Reject</button></td><td><button class="btn btn-success" (click)="approved()" [disabled]="alreadydone">Approve</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary" (click)="moveback()">Back</button></td>
+        </tr>
+    </table>
+
+
+
+

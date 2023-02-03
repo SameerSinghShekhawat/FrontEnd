@@ -1,0 +1,46 @@
+
+<head>
+    <title>Nodal HomePage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class=" text-center mx-auto border border-dark m-4" style="width: auto; max-width: 60%">
+            <h4 class="card-title mt-3 font-weight-bold">Institute Home Page</h4>
+    </div>
+    
+    <div class="row m-4 text-center">
+        <button [routerLink]="''" class="btn btn-primary">Logout</button>
+    </div>
+    
+    <div class="row m-4  text-center ">
+
+        <div class="col">
+            <div class="card border-dark mb-3 row" style="max-width: 100%; height: 100%;">
+                <div class="card-header">Scholarship Forms <button class="btn btn-primary ml-4" (click)="getList()">Get Forms</button></div>
+                <div class="card-body text-dark overflow-auto">
+                    <table class="table">
+                        <thead>
+                            <th>Scholarship ID</th>
+                            <th>Open Form</th>
+                        </thead>
+                        <tr *ngFor="let sc of scholarship">
+                            <td scope="col">{{sc.uniqid}}</td><td><button [routerLink]="['toscholarformview2',sc.uniqid]" class="btn btn-primary">Open</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-dark mb-3 row" style="max-width: 100%; height: 100%;">
+                <div class="card-header">Other Details</div>
+                <div class="card-body text-dark overflow-auto m-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non. Sollicitudin nibh sit amet commodo nulla facilisi. Donec pretium vulputate sapien nec sagittis aliquam. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Consectetur a erat nam at lectus. Mauris nunc congue nisi vitae suscipit tellus mauris a. Vel facilisis volutpat est velit. Massa eget egestas purus viverra accumsan in. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Faucibus turpis in eu mi bibendum neque egestas congue. Non pulvinar neque laoreet suspendisse interdum. Risus feugiat in ante metus dictum at. Amet luctus venenatis lectus magna fringilla. Arcu non odio euismod lacinia at quis risus sed. Vestibulum sed arcu non odio. Nulla malesuada pellentesque elit eget gravida cum. Non nisi est sit amet. Ut placerat orci nulla pellentesque. Turpis egestas maecenas pharetra convallis posuere morbi. Vitae aliquet nec ullamcorper sit amet risus nullam. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Lorem donec massa sapien faucibus et molestie ac feugiat. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Lobortis elementum nibh tellus molestie nunc non blandit. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Ut lectus arcu bibendum at varius vel pharetra vel. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Risus ultricies tristique nulla aliquet enim tortor at. Eu nisl nunc mi ipsum faucibus vitae. Tellus id interdum velit laoreet id donec ultrices tincidunt.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+

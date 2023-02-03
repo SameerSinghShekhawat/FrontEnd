@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <div class=" text-center mx-auto border border-dark m-4" style="width: auto; max-width: 60%">
+                <h4 class="card-title mt-3 font-weight-bold">Student Registration</h4>
+        </div> 
+        <div class="row m-4  text-center ">
+            <div>
+                <form #studForm="ngForm" (ngSubmit)="registerStudent(studForm)">
+                    <table>
+                        <tr>
+                            <td>State</td><input type="text" name="state" ngModel required class="form-control"><td>District</td><input type="text" name="district" ngModel required class="form-control"> 
+                        </tr>
+                        <tr>
+                            <td>Name</td><input type="text" name="name" ngModel required class="form-control"><td>Date Of Birth</td><input type="date" name="dob" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Gender</td><input type="text" name="gender" ngModel required class="form-control"><td>Phone</td><input type="number" name="mobile" ngModel required maxlength="10" class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Email Id</td><input type="email" name="email" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Institute Code</td><input type="text" name="institutecode" ngModel required class="form-control"><td>Aadhar Number</td><input type="text" name="uniqid" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Bank IFSC</td><input type="text" name="bankifsc" ngModel required class="form-control"><td>Bank Account Number</td><input type="text" name="bankaccount" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Bank Name</td><input type="text" name="bankname" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Password</td><input type="password" name="password" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td><button (click)="goBack()" class="btn btn-primary mt-4">Cancel</button></td>
+                            <td><input type="submit" name="Save" [disabled]="!studForm.valid" class="btn btn-primary mt-4"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <div class=" text-center mx-auto border border-dark m-4" style="width: auto; max-width: 60%">
+                <h4 class="card-title mt-3 font-weight-bold">Institute Registration</h4>
+        </div> 
+        <div class="row m-4  text-center ">
+            <div>
+                <form #instForm="ngForm" (ngSubmit)="instituteregister(instForm)" class="form-group">
+                    <table>
+                        <tr>
+                            <td>Id</td><input type="text" name="instid" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Name</td><input type="text" name="instname" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Category</td><input type="text" name="instcategory" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>State</td><input type="text" name="inststate" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Institute City</td><input type="text" name="instcity" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Institute Type</td><input type="text" name="insttype" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Institute Mail</td><input type="email" name="instmail" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>DISE Code</td><input type="text" name="instdisecode" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Password</td><input type="password" name="instpassword" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Address Line 1</td><input type="text" name="instaddressline1" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Address Line 2</td><td><input type="text" name="instaddressline2" ngModel required class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Affialted Type</td><td><input type="text" name="instaffiliatedinsttype" ngModel required class="form-control"></td>
+                        </tr>
+                       <tr>
+                            <td>District</td><input type="text" name="instdistrict" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Principal</td><input type="text" name="instprincipalname" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td>Affialted University</td><input type="text" name="instaffialteduniboardname" ngModel required class="form-control">
+                        </tr>
+                        <tr>
+                            <td><button (click)="goBack()" class="btn btn-primary mt-4">Cancle</button></td>
+                            <td><input type="submit" value="Submit" class="btn btn-primary mt-4" [disabled]="!instForm.valid"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+
